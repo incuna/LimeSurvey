@@ -4,10 +4,7 @@
     "scripts":
     {
         "dokku": {
-            "predeploy": [
-                "mkdir -p /app/tmp/session",
-                "cp application/config/{config-dokku-pgsql.php,config.php}"
-            ]
+            "predeploy": "(mkdir -p /app/tmp/session; cp ./application/config/{config-dokku-pgsql.php,config.php})"
         }
     }
 }
